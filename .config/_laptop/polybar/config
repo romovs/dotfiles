@@ -1,0 +1,167 @@
+[settings]
+    screenchange-reload = true
+
+[global/wm]
+    margin-top = 5
+    margin-bottom = 5
+
+[colors]
+    black1=     #000000
+    black2 =    #666666
+    red1 =      #f2777a
+    red2 =      #e60053
+    green1 =    #83b127
+    yellow1 =   #F1A981
+    yellow2 =   #fec96a
+    blue1 =     #64d4e9
+    blue2 =     #64d4e9
+    magenta1 =  #db5d5e
+    magenta2 =  #db5d5e
+    cyan1 =     #64d4e9
+    cyan2 =     #64d4e9
+    white1 =    #B1B1B1
+    white2 =    #CACACA
+
+    bg =        #000000
+    fg =        #567777
+    formatbg =  ${self.magenta1}
+
+[bar/primary]
+    monitor = eDP-1
+    width = 100%
+    height = 18
+    offset-x = 0
+    offset-y = 0
+    bottom = false
+
+    border-size = 4
+    border-color = ${colors.bg}
+
+    line-size = 1
+    background = ${colors.bg}
+
+    spacing = 1
+    padding-left = 1
+    padding-right = 1
+    module-margin-left = 1
+    module-margin-right = 1
+
+    font-0 = monospace:size=10:weight=regular;2
+    font-1 = Font Awesome 5 Brands:style=Regular:size=10;3
+    font-2 = Font Awesome 5 Free:style=Solid:size=10;3
+    font-3 = Font Awesome 5 Free:style=Regular:size=10;3
+    font-4 = Material Icons:size=12;4
+
+    tray-position = right
+    tray-offset-x = 0
+    tray-offset-y = 0
+    tray-padding = 2
+    tray-maxsize = 18
+    tray-scale = 1.0
+
+    modules-left = i3
+    modules-right = i-caja i-lock gmail keyboard pulseaudio cpu memory battery0 battery1 date bt
+
+[module/i3]
+    type = internal/i3
+    pin-workspaces = true
+    index-sort = true
+
+    icon-font = 5
+    ws-icon-0 = 1: www;
+    ws-icon-1 = 2: sub;
+    ws-icon-2 = 3: dev;
+    ws-icon-3 = 4: fm;
+    ws-icon-4 = 5: term;
+    ws-icon-5 = 6: gfx;
+    ws-icon-6 = 7: vm;
+    ws-icon-7 = 8: misc;
+    ws-icon-8 = 9: media;
+    ws-icon-9 = 10: im;
+
+    format = <label-state>
+
+    label-focused = %{T4}%{F#95cae3}%icon%%{F-}%{T-}
+    label-focused-underline = ${colors.red2}
+    label-focused-background = ${colors.bg}
+    label-focused-foreground = ${colors.fg}
+    label-focused-padding = 1
+
+    label-unfocused = %{T4}%{F#95cae3}%icon%%{F-}%{T-}
+    label-unfocused-background = ${colors.bg}
+    label-unfocused-foreground = ${colors.fg}
+    label-unfocused-padding = 1
+
+    label-occupied = %{T4}%{F#95cae3}%icon%%{F-}%{T-}
+    label-occupied-background = ${colors.bg}
+    label-occupied-foreground = ${colors.fg}
+    label-occupied-padding = 1
+
+    label-urgent = %{T4}%{F#e60053}%icon%%{F-}%{T-}
+    label-urgent-background = ${colors.bg}
+    label-urgent-foreground = ${colors.red2}
+    label-urgent-padding = 1
+
+    label-separator = |
+    label-separator-padding = 1
+    label-separator-foreground = #6b6b6b
+
+[module/keyboard]
+    type = internal/xkeyboard
+    format = %{A3:mate-keyboard-properties&:}%{T5}%{F#6b6b6b} %{F-}%{T-}%{F#95cae3}<label-layout>%{F-}%{A}
+    format-underline = #f89438
+
+[module/pulseaudio]
+    type = internal/pulseaudio
+    use-ui-max = false
+    interval = 5
+    format-volume = %{A3:mate-volume-control&:}<label-volume>%{A}
+    label-volume = %{T5}%{F#6b6b6b}%{F-}%{T-} %{F#95cae3}%percentage:3%%{F-}
+    label-volume-foreground = ${colors.fg}
+    label-volume-underline = ${colors.magenta1}
+    label-muted = %{T5}%{F#6b6b6b}%{F-}%{T-} %{F#e60053}off%{F-}
+    label-muted-underline = ${colors.magenta1}
+
+[module/memory]
+    type = internal/memory
+    interval = 1
+    format = <label>
+    label = %{T5}%{F#6b6b6b}%{F-}%{T-} %{F#95cae3}%gb_used%%{F-}
+    format-underline = #9f4454
+
+[module/cpu]
+    type = internal/cpu
+    interval = 0.5
+    format = %{A:mate-system-monitor&:}<label>%{A}
+    label = %{T5}%{F#6b6b6b}%{F-}%{T-} %{F#95cae3}%percentage:2%%%{F-}
+    format-underline = #904021
+
+[module/date]
+    type = internal/date
+    date = %{F#95cae3}%a %b %d%{F-} %{F#99ba92}%H:%M%{F-}
+    date-alt = %{F#95cae3}%Y-%m-%d%{F-} %{F#99ba92}%H:%M%{F-}
+    interval = 5
+    label = %date%
+    format-underline = #456645
+
+[module/gmail]
+    type = custom/script
+    exec = ~/.config/polybar/mail
+    tail = false
+    interval = 70
+    format = <label>
+    format-foreground = #000
+    format-underline = #f2777a
+
+[module/i-caja]
+    type = custom/text
+    content = 
+    content-foreground = #c596b8
+    click-left = env --unset=DESKTOP_AUTOSTART_ID nemo &
+
+[module/i-lock]
+    type = custom/text
+    content = 
+    content-foreground = #99ba92
+    click-left = mate-screensaver-command -a
+    format-padding = 14

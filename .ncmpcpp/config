@@ -1,0 +1,29 @@
+##############################################################
+## ncmpcpp config. Should be placed in ~/.ncmpcpp           ##
+##############################################################
+
+mpd_host = localhost
+mpd_port = 6600
+#mpd_connection_timeout = 5
+mpd_music_dir = ~/Music
+#mpd_crossfade_time = 5
+message_delay_time = 4
+execute_on_song_change = ~/.ncmpcpp/cover.sh
+playlist_display_mode = columns
+browser_display_mode = classic
+search_engine_display_mode = classic
+playlist_editor_display_mode = classic
+progressbar_look = ■■□
+progressbar_boldness = yes
+## Available values: database, playlist.
+default_place_to_search_in = database
+## Available values: classic, alternative.
+user_interface = alternative
+startup_screen = playlist
+startup_slave_screen = media_library
+locked_screen_width_part = 60
+## Note: If below is enabled, ncmpcpp will ignore leading
+## "The" word while sorting items in browser, tags in media library, etc.
+#ignore_leading_the = no
+mouse_support = yes
+enable_window_title = no
