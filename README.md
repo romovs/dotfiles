@@ -11,12 +11,7 @@ dotfiles and fresh system installation instructions for personal use.
 ## dnf
 ```
 dnf install galculator ghex gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncmpcpp google-droid-sans-fonts google-droid-sans-mono-fonts ffmpegthumbnailer kdiff3 zsh kernel-devel kernel-headers gcc mplayer aircrack-ng nmap darktable libsane-hpaio nemo cmake git xorg-x11-fonts-misc ImageMagick
-python3-cairo-devel cairo-gobject-devel gobject-introspection-devel dbus-glib-devel python3-devel
-```
-
-For polybar/i3/termite build
-```
-dnf install xcb-proto xcb-util-devel xcb-util-wm-devel xcb-util-image-devel
+python3-cairo-devel cairo-gobject-devel gobject-introspection-devel dbus-glib-devel python3-devel xcb-proto xcb-util-devel xcb-util-wm-devel xcb-util-image-devel
 ```
 
 ## i3 over mate
