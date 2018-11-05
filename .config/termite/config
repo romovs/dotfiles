@@ -8,18 +8,25 @@ cursor=#95cae3
 
 # Colors
 color0=#090c1c
-color1=#95364D
-color2=#C83F4E
-color3=#EE5364
-color4=#99ba92
-color5=#99ba92
-color6=#E06D89
-color7=#95cae3
 color8=#688d9e
-color9=#95364D
-color10=#C83F4E
-color11=#EE5364
-color12=#99ba92
-color13=#99ba92
+
+color1=#b31e42
+color9=#b6425e
+
+color2=#C83F4E
+color10=#c95561
+
+color3=#EE5364
+color11=#e8727f
+
+color4=#b9ca4a
+color12=#c9d47f
+
+color5=#93d44f
+color13=#99cc99
+
+color6=#E06D89
 color14=#E06D89
+
+color7=#95cae3
 color15=#95cae3

@@ -11,23 +11,22 @@ dotfiles and fresh system installation instructions for personal use.
 ## dnf
 ```
 dnf install galculator ghex gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncmpcpp google-droid-sans-fonts google-droid-sans-mono-fonts ffmpegthumbnailer kdiff3 zsh kernel-devel kernel-headers gcc mplayer aircrack-ng nmap darktable libsane-hpaio nemo cmake git xorg-x11-fonts-misc ImageMagick
-python3-cairo-devel cairo-gobject-devel gobject-introspection-devel dbus-glib-devel python3-devel xcb-proto xcb-util-devel xcb-util-wm-devel xcb-util-image-devel
+python3-cairo-devel cairo-gobject-devel gobject-introspection-devel dbus-glib-devel python3-devel xcb-proto xcb-util-devel xcb-util-wm-devel xcb-util-image-devel powerline-fonts
 ```
 
 ## i3 over mate
 ### dconf-editor:
-org.mate.desktop.session.required-components windowmanager 'i3'
-org.mate.desktop.background show-desktop-icons false
-org.mate.desktop.session required-components-list ['windowmanager']
-org.mate.desktop.session.required-components panel ''
-org.mate.peripherals.keyboard.general disable-indicator true
+org.mate.desktop.session.required-components windowmanager 'i3'  
+org.mate.desktop.background show-desktop-icons false  
+org.mate.desktop.session required-components-list ['windowmanager']  
+org.mate.desktop.session.required-components panel ''  
+org.mate.peripherals.keyboard.general disable-indicator true  
 
 Remove volume icon from tray: Startup Applicaions > Show Desktop Voulme control > false
 
 ## Firefox extensions
-https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/           (see external file for custom filters)
+https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/           (see external file for custom filters)  
 https://addons.mozilla.org/en-US/firefox/addon/youtube_downloader_webx/
-
 
 ## Sublime
 - Theme: Agila Theme (select Agila Neon.sublime-theme)
@@ -67,6 +66,11 @@ Keymap
 
 ## zsh
 https://github.com/robbyrussell/oh-my-zsh
+```
+sudo chsh -s /bin/zsh root
+sudo ln -s $HOME/.oh-my-zsh /root/.oh-my-zsh
+sudo ln -s $HOME/.zshrc /root/.zshrc
+```
 
 ## Tools
 ```bash
@@ -81,7 +85,7 @@ xrdb ~/.Xresources
 ```
 
 ## SmartGit
-smartgit - conflict resolver: kdiff3
+smartgit - conflict resolver: kdiff3  
 arguemnts ${baseFile} ${leftFile} ${rightFile} -o ${mergedFile}
 
 ## Thinkpad throttle fix

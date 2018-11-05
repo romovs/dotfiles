@@ -1,20 +1,18 @@
 # fixes backspace problem
 TERM=xterm
 
+ZSH_DISABLE_COMPFIX=true
+
 # If you come from bash you might have to change your $PATH.
-export PATH=/opt/node-v8.12.0-linux-x64/bin:/home/rom/projects/nim-0.19.0/bin:$PATH
+export PATH=$HOME/.cargo/bin:/opt/node-v8.12.0-linux-x64/bin:$HOME/projects/nim-0.19.0/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/rom/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 alias sur='sudo -E -s'
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="gentoo"
-# gianu
-# awesomepanda
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -58,7 +56,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git git-extras)
 
 source $ZSH/oh-my-zsh.sh
 
