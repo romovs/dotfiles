@@ -47,20 +47,20 @@
     module-margin-right = 1
 
     font-0 = monospace:size=10:weight=regular;2
-    font-1 = Font Awesome 5 Brands:style=Regular:size=10;3
+    font-1 = Font Awesome 5 Brands:style=Regular:size=11;3
     font-2 = Font Awesome 5 Free:style=Solid:size=10;3
     font-3 = Font Awesome 5 Free:style=Regular:size=10;3
     font-4 = Material Icons:size=12;4
 
-    tray-position = right
-    tray-offset-x = 0
-    tray-offset-y = 0
-    tray-padding = 2
-    tray-maxsize = 18
-    tray-scale = 1.0
+    ;tray-position = right
+    ;tray-offset-x = 0
+    ;tray-offset-y = 0
+    ;tray-padding = 2
+    ;tray-maxsize = 18
+    ;tray-scale = 1.0
 
     modules-left = i3
-    modules-right = i-caja i-lock gmail keyboard pulseaudio cpu memory battery0 battery1 date bt
+    modules-right = i-vm-win i-vm-osx i-fm i-lock eth wifi gmail skype battery keyboard pulseaudio cpu memory battery0 battery1 date bt
 
 [module/i3]
     type = internal/i3
@@ -108,8 +108,7 @@
 
 [module/keyboard]
     type = internal/xkeyboard
-    format = %{A3:mate-keyboard-properties&:}%{T5}%{F#6b6b6b} %{F-}%{T-}%{F#95cae3}<label-layout>%{F-}%{A}
-    format-underline = #f89438
+    format = %{A3:mate-keyboard-properties&:}%{F#6b6b6b} %{F-}%{F#95cae3}<label-layout>%{F-}%{A}
 
 [module/pulseaudio]
     type = internal/pulseaudio
@@ -118,31 +117,26 @@
     format-volume = %{A3:mate-volume-control&:}<label-volume>%{A}
     label-volume = %{T5}%{F#6b6b6b}%{F-}%{T-} %{F#95cae3}%percentage:3%%{F-}
     label-volume-foreground = ${colors.fg}
-    label-volume-underline = ${colors.magenta1}
     label-muted = %{T5}%{F#6b6b6b}%{F-}%{T-} %{F#e60053}off%{F-}
-    label-muted-underline = ${colors.magenta1}
 
 [module/memory]
     type = internal/memory
     interval = 1
     format = <label>
-    label = %{T5}%{F#6b6b6b}%{F-}%{T-} %{F#95cae3}%gb_used%%{F-}
-    format-underline = #9f4454
+    label = %{T5}%{F#6b6b6b}%{F-}%{T-} %{F#95cae3}%gb_used:8%%{F-}
 
 [module/cpu]
     type = internal/cpu
     interval = 0.5
     format = %{A:mate-system-monitor&:}<label>%{A}
     label = %{T5}%{F#6b6b6b}%{F-}%{T-} %{F#95cae3}%percentage:2%%%{F-}
-    format-underline = #904021
 
 [module/date]
     type = internal/date
-    date = %{F#95cae3}%a %b %d%{F-} %{F#99ba92}%H:%M%{F-}
-    date-alt = %{F#95cae3}%Y-%m-%d%{F-} %{F#99ba92}%H:%M%{F-}
+    date = %{F#6b6b6b}%{F-} %{F#95cae3}%a %b %d%{F-} %{F#f89438}%H:%M%{F-}
+    date-alt = %{F#6b6b6b}%{F-} %{F#95cae3}%Y-%m-%d%{F-} %{F#f89438}%H:%M%{F-}
     interval = 5
     label = %date%
-    format-underline = #456645
 
 [module/gmail]
     type = custom/script
@@ -151,9 +145,8 @@
     interval = 70
     format = <label>
     format-foreground = #000
-    format-underline = #f2777a
 
-[module/i-caja]
+[module/i-fm]
     type = custom/text
     content = 
     content-foreground = #c596b8
@@ -165,3 +158,49 @@
     content-foreground = #99ba92
     click-left = mate-screensaver-command -a
     format-padding = 14
+
+[module/i-vm-win]
+    type = custom/text
+    content = 
+    content-foreground = #d2b9d7
+    click-left = VBoxManage startvm "Dev" 
+    format-padding = 14
+
+[module/i-vm-osx]
+    type = custom/text
+    content = 
+    content-foreground = #fecdaf
+    click-left = VBoxManage startvm "OS X" 
+    format-padding = 14
+
+[module/battery]
+    type = custom/script
+    exec = ~/.config/polybar/battery.sh
+    tail = false
+    interval = 3
+    format = %{A:mate-power-statistics&:}%{A3:mate-power-preferences&:}<label>%{A}%{A}
+
+[module/skype]
+    type = custom/script
+    exec = ~/.config/polybar/skype.sh
+    tail = false
+    interval = 2
+    format = <label>
+
+[module/eth]
+    type = internal/network
+    interface = enp0s31f6
+    interval = 3
+    format-connected = %{F#6b6b6b}%{F-}%{F#95cae3}<label-connected>%{F-}
+    format-disconnected = %{F#6b6b6b}%{F-} %{F#95cae3}<label-disconnected>%{F-}
+    label-connected = %ifname%
+    label-disconnected = ~
+
+[module/wifi]
+    type = internal/network
+    interface = wlp3s0
+    interval = 3
+    format-connected = %{A1:~/.config/polybar/wifi-menu.sh:}%{F#6b6b6b}%{F-} %{F#95cae3}<label-connected>%{F-}%{A}
+    format-disconnected = %{A1:~/.config/polybar/wifi-menu.sh:}%{F#6b6b6b}%{F-} %{F#95cae3}<label-disconnected>%{F-}%{A}
+    label-connected = %essid%
+    label-disconnected = ~
