@@ -10,6 +10,7 @@ dotfiles and fresh system installation instructions for personal use.
 - minetime
 - skype
 - intellij idea
+- sublime
 
 ## Dnf
 ```
