@@ -7,6 +7,9 @@ dotfiles and fresh system installation instructions for personal use.
 - termite
 - ncmpcpp (urxvt)
 - nemo
+- minetime
+- skype
+- intellij idea
 
 ## dnf
 ```
@@ -80,9 +83,8 @@ ln -s /opt/idea-IC-182.4892.20/bin/idea.sh /usr/local/bin/idea
 ```
 
 ## Customization
-```
-xrdb ~/.Xresources
-```
+Copy icon into clipboard `echo -ne "\ue897" | xclip -selection clipboard`  
+Reload X resources `xrdb ~/.Xresources`
 
 ## SmartGit
 smartgit - conflict resolver: kdiff3  

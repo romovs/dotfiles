@@ -163,7 +163,7 @@ for_window [urgent="latest"] focus
 
 no_focus [class="Skype"]
 
-focus_on_window_activation smart
+focus_on_window_activation focus
 
 # The right button over a titlebar kills the window
 bindsym --release button3 kill
