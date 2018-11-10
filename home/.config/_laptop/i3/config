@@ -225,6 +225,6 @@ exec urxvt -e ncmpcpp
 exec skypeforlinux
 exec minetime
 exec subl
-exec smartgit
+exec termite
 exec nemo &
 exec firefox
