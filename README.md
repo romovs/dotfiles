@@ -11,7 +11,7 @@ dotfiles and fresh system installation instructions for personal use.
 - skype
 - intellij idea
 
-## dnf
+## Dnf
 ```
 dnf install galculator ghex gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncmpcpp google-droid-sans-fonts google-droid-sans-mono-fonts ffmpegthumbnailer kdiff3 zsh kernel-devel kernel-headers gcc mplayer aircrack-ng nmap darktable libsane-hpaio nemo cmake git xorg-x11-fonts-misc ImageMagick
 python3-cairo-devel cairo-gobject-devel gobject-introspection-devel dbus-glib-devel python3-devel xcb-proto xcb-util-devel xcb-util-wm-devel xcb-util-image-devel powerline-fonts sassc
@@ -37,37 +37,12 @@ https://addons.mozilla.org/en-US/firefox/addon/youtube_downloader_webx/
 - A File Icon
 - Trailling Spaces
 - Color Highlight
+- SASS
+- BracketHighlighter
+- AllAutocomplete
+- SideBarEnhancements
 
-Settings
-```json
-{
-    "color_scheme": "Packages/Monokai-Black/Monokai Black.tmTheme",
-    "dictionary": "Packages/Language - English/en_GB.dic",
-    "font_size": 11,
-    "highlight_modified_tabs": true,
-    "ignored_packages":
-    [
-    ],
-    "open_files_in_new_window": false,
-    "overlay_scroll_bars": "enabled",
-    "rulers":
-    [
-        80,
-        100
-    ],
-    "theme": "Agila Neon.sublime-theme",
-    "translate_tabs_to_spaces": true
-}
-```
-
-Keymap
-```
-[
-    {"keys": ["ctrl+m"], "command": "toggle_menu"}
-]
-```
-
-## zsh
+## Zsh
 https://github.com/robbyrussell/oh-my-zsh
 ```
 sudo chsh -s /bin/zsh root

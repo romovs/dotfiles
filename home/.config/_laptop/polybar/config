@@ -5,27 +5,6 @@
     margin-top = 5
     margin-bottom = 5
 
-[colors]
-    black1=     #000000
-    black2 =    #666666
-    red1 =      #f2777a
-    red2 =      #e60053
-    green1 =    #83b127
-    yellow1 =   #F1A981
-    yellow2 =   #fec96a
-    blue1 =     #64d4e9
-    blue2 =     #64d4e9
-    magenta1 =  #db5d5e
-    magenta2 =  #db5d5e
-    cyan1 =     #64d4e9
-    cyan2 =     #64d4e9
-    white1 =    #B1B1B1
-    white2 =    #CACACA
-
-    bg =        #000000
-    fg =        #567777
-    formatbg =  ${self.magenta1}
-
 [bar/primary]
     monitor = eDP-1
     width = 100%
@@ -35,10 +14,10 @@
     bottom = false
 
     border-size = 4
-    border-color = ${colors.bg}
+    border-color = #000000
 
     line-size = 1
-    background = ${colors.bg}
+    background = #000000
 
     spacing = 1
     padding-left = 1
@@ -82,24 +61,16 @@
     format = <label-state>
 
     label-focused = %{T4}%{F#95cae3}%icon%%{F-}%{T-}
-    label-focused-underline = ${colors.red2}
-    label-focused-background = ${colors.bg}
-    label-focused-foreground = ${colors.fg}
+    label-focused-underline = #e60053
     label-focused-padding = 1
 
     label-unfocused = %{T4}%{F#95cae3}%icon%%{F-}%{T-}
-    label-unfocused-background = ${colors.bg}
-    label-unfocused-foreground = ${colors.fg}
     label-unfocused-padding = 1
 
     label-occupied = %{T4}%{F#95cae3}%icon%%{F-}%{T-}
-    label-occupied-background = ${colors.bg}
-    label-occupied-foreground = ${colors.fg}
     label-occupied-padding = 1
 
     label-urgent = %{T4}%{F#e60053}%icon%%{F-}%{T-}
-    label-urgent-background = ${colors.bg}
-    label-urgent-foreground = ${colors.red2}
     label-urgent-padding = 1
 
     label-separator = |
@@ -116,7 +87,6 @@
     interval = 5
     format-volume = %{A3:mate-volume-control&:}<label-volume>%{A}
     label-volume = %{T5}%{F#6b6b6b}%{F-}%{T-} %{F#95cae3}%percentage:3%%{F-}
-    label-volume-foreground = ${colors.fg}
     label-muted = %{T5}%{F#6b6b6b}%{F-}%{T-} %{F#e60053}off%{F-}
 
 [module/memory]
@@ -133,8 +103,8 @@
 
 [module/date]
     type = internal/date
-    date = %{F#6b6b6b}%{F-} %{F#95cae3}%a %b %d%{F-} %{F#f89438}%H:%M%{F-}
-    date-alt = %{F#6b6b6b}%{F-} %{F#95cae3}%Y-%m-%d%{F-} %{F#f89438}%H:%M%{F-}
+    date = %{F#6b6b6b}%{F-} %{F#95cae3}%a %b %d%{F-} %{F#e970eb}%H:%M%{F-}
+    date-alt = %{F#6b6b6b}%{F-} %{F#95cae3}%Y-%m-%d%{F-} %{F#e970eb}%H:%M%{F-}
     interval = 5
     label = %date%
 
@@ -200,7 +170,7 @@
     type = internal/network
     interface = wlp3s0
     interval = 3
-    format-connected = %{A1:~/.config/polybar/wifi-menu.sh:}%{F#6b6b6b}%{F-} %{F#95cae3}<label-connected>%{F-}%{A}
-    format-disconnected = %{A1:~/.config/polybar/wifi-menu.sh:}%{F#6b6b6b}%{F-} %{F#95cae3}<label-disconnected>%{F-}%{A}
+    format-connected = %{A1:~/.config/polybar/wifi-menu.sh:}%{A3:nm-connection-editor&:}%{F#6b6b6b}%{F-} %{F#95cae3}<label-connected>%{F-}%{A}%{A}
+    format-disconnected = %{A1:~/.config/polybar/wifi-menu.sh:}%{A3:nm-connection-editor&:}%{F#6b6b6b}%{F-} %{F#95cae3}<label-disconnected>%{F-}%{A}%{A}
     label-connected = %essid%
     label-disconnected = ~

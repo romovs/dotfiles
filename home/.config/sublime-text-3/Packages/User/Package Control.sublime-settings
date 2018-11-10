@@ -1,0 +1,25 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"10% Too Dull for My Tastes Color Scheme",
+		"A File Icon",
+		"Agila Theme",
+		"All Autocomplete",
+		"BracketHighlighter",
+		"Color Highlight",
+		"i3 wm",
+		"Monokai-Black",
+		"Package Control",
+		"Sass",
+		"SideBarEnhancements",
+		"TrailingSpaces"
+	],
+	"repositories":
+	[
+		"https://github.com/matkl/Monokai-Black"
+	]
+}
