@@ -20,7 +20,7 @@ default_place_to_search_in = database
 ## Available values: classic, alternative.
 user_interface = alternative
 startup_screen = playlist
-startup_slave_screen = media_library
+startup_slave_screen = browser
 locked_screen_width_part = 60
 ## Note: If below is enabled, ncmpcpp will ignore leading
 ## "The" word while sorting items in browser, tags in media library, etc.

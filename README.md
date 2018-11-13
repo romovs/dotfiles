@@ -56,6 +56,7 @@ sudo ln -s $HOME/.zshrc /root/.zshrc
 ln -s /opt/android-studio/bin/studio.sh /usr/local/bin/android
 ln -s /opt/smartgit/bin/smartgit.sh /usr/local/bin/smartgit
 ln -s /opt/idea-IC-182.4892.20/bin/idea.sh /usr/local/bin/idea
+ln -s /opt/gitkraken/gitkraken.sh /usr/local/bin/gitkraken
 ```
 
 ## Customization
@@ -68,3 +69,9 @@ arguemnts ${baseFile} ${leftFile} ${rightFile} -o ${mergedFile}
 
 ## Thinkpad throttle fix
 https://github.com/erpalma/lenovo-throttling-fix
+
+## Nemo
+```
+sudo rm -f /usr/share/nemo/actions/send-by-mail.nemo_action
+
+```

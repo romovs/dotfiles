@@ -1,14 +1,14 @@
 ! ---------------------------- Colors 0-7
 *.color0: #090c1c
 *color0:  #090c1c
-*.color1: #95364D
-*color1:  #95364D
+*.color1: #d962db
+*color1:  #d962db
 *.color2: #EE5364
 *color2:  #EE5364
-*.color3: #e970eb
-*color3:  #e970eb
-*.color4: #b9ca4a
-*color4:  #b9ca4a
+*.color3: #e83375
+*color3:  #e83375
+*.color4: #fecdaf
+*color4:  #fecdaf
 *.color5: #99ba92
 *color5:  #99ba92
 *.color6: #E06D89

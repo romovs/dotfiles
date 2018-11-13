@@ -127,6 +127,7 @@ assign [class="Firefox"] 1: www
 assign [instance="sublime"] 2: sub
 assign [class="jetbrains-idea"] 3: dev
 assign [class="SmartGit"] 3: dev
+assign [class="GitKraken"] 3: dev
 assign [instance="gimp"] 6: gfx
 assign [instance="VirtualBox" title="^(?!.*Oracle VM VirtualBox : 2.*).*$"] 7: vm
 assign [title=".*Oracle VM VirtualBox : 2$"] 8: misc
