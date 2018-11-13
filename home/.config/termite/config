@@ -4,22 +4,22 @@ font = Droid Sans Mono 9
 [colors]
 background=#090c1c
 foreground=#95cae3
-cursor=#95cae3
+cursor=#dddddd
 
 # Colors
 color0=#090c1c
 color8=#688d9e
 
-color1=#b31e42
-color9=#b6425e
+color1=#e60053
+color9=#e83375
 
-color2=#EE5364
-color10=#e8727f
+color2=#638cd8
+color10=#6e8dc7
 
-color3=#e970eb
-color11=#e78fe8
+color3=#d962db
+color11=#d962db
 
-color4=#b9ca4a
+color4=#fecdaf
 color12=#c9d47f
 
 color5=#93d44f

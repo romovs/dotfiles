@@ -39,7 +39,8 @@
     ;tray-scale = 1.0
 
     modules-left = i3
-    modules-right = i-vm-win i-vm-osx i-fm i-lock eth wifi gmail skype battery keyboard pulseaudio cpu memory battery0 battery1 date bt
+    modules-center = i-vm-win i-vm-win32 i-vm-osx i-fm i-lock
+    modules-right = eth wifi gmail skype battery keyboard pulseaudio cpu memory battery0 battery1 date bt
 
 [module/i3]
     type = internal/i3
@@ -103,8 +104,8 @@
 
 [module/date]
     type = internal/date
-    date = %{F#6b6b6b}%{F-} %{F#95cae3}%a %b %d%{F-} %{F#e970eb}%H:%M%{F-}
-    date-alt = %{F#6b6b6b}%{F-} %{F#95cae3}%Y-%m-%d%{F-} %{F#e970eb}%H:%M%{F-}
+    date = %{F#6b6b6b}%{F-} %{F#95cae3}%a %b %d%{F-} %{F#fecdaf}%H:%M%{F-}
+    date-alt = %{F#6b6b6b}%{F-} %{F#95cae3}%Y-%m-%d%{F-} %{F#fecdaf}%H:%M%{F-}
     interval = 5
     label = %date%
 
@@ -119,27 +120,34 @@
 [module/i-fm]
     type = custom/text
     content = 
-    content-foreground = #c596b8
+    content-foreground = #6b6b6b
     click-left = env --unset=DESKTOP_AUTOSTART_ID nemo &
 
 [module/i-lock]
     type = custom/text
     content = 
-    content-foreground = #99ba92
+    content-foreground = #6b6b6b
     click-left = mate-screensaver-command -a
     format-padding = 14
 
 [module/i-vm-win]
     type = custom/text
     content = 
-    content-foreground = #d2b9d7
+    content-foreground = #6b6b6b
     click-left = VBoxManage startvm "Dev" 
+    format-padding = 14
+
+[module/i-vm-win32]
+    type = custom/text
+    content = 
+    content-foreground = #6b6b6b
+    click-left = VBoxManage startvm "Win 32-bit" 
     format-padding = 14
 
 [module/i-vm-osx]
     type = custom/text
     content = 
-    content-foreground = #fecdaf
+    content-foreground = #6b6b6b
     click-left = VBoxManage startvm "OS X" 
     format-padding = 14
 

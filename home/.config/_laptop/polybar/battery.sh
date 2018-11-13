@@ -21,7 +21,7 @@ fi
 
 if [[ "${BAT_STATE}" = "discharging" ]]; then
     if [[ ${POWER} -le ${DANGER} ]]; then
-        echo "%{F#6b6b6b}${BAT_ICON}%{F-} %{F#e60053}${POWER_PADDED}%%{F-}"
+        echo "%{F#e60053}${BAT_ICON} ${POWER_PADDED}%%{F-}"
     else
         echo "%{F#6b6b6b}${BAT_ICON}%{F-} %{F#95cae3}${POWER_PADDED}%%{F-}"
     fi
