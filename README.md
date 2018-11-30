@@ -57,6 +57,7 @@ ln -s /opt/android-studio/bin/studio.sh /usr/local/bin/android
 ln -s /opt/smartgit/bin/smartgit.sh /usr/local/bin/smartgit
 ln -s /opt/idea-IC-182.4892.20/bin/idea.sh /usr/local/bin/idea
 ln -s /opt/gitkraken/gitkraken.sh /usr/local/bin/gitkraken
+ln -s /opt/MineTime/minetime /usr/local/bin/minetime
 ```
 
 ## Customization

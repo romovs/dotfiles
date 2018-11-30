@@ -217,7 +217,7 @@ client.focused_inactive #000000   #2f343a   #888888   #e60053   #e60053
 client.unfocused        #000000   #2f343a   #888888   #e60053   #e60053
 client.urgent           #000000   #e60053   #fefbec   #e60053   #e60053
 client.placeholder      #000000   #0c0c0c   #888888   #000000   #e60053
-client.background       #2f343a
+client.background       #000000
 
 exec mpd
 exec_always --no-startup-id $HOME/.config/polybar/run.sh
