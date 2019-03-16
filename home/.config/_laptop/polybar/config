@@ -6,7 +6,10 @@
     margin-bottom = 5
 
 [bar/primary]
-    monitor = eDP-1
+    ; laptop
+    ;monitor = eDP-1
+    ; desktop
+    monitor = DP-0
     width = 100%
     height = 18
     offset-x = 0
@@ -41,6 +44,41 @@
     modules-left = i3
     modules-center = i-vm-win i-vm-win32 i-vm-osx i-fm i-lock
     modules-right = eth wifi gmail skype battery keyboard pulseaudio cpu memory battery0 battery1 date bt
+
+[bar/secondary]
+    monitor = DVI-D-1
+    width = 100%
+    height = 18
+    offset-x = 0
+    offset-y = 0
+    bottom = false
+
+    border-size = 4
+    border-color = #000000
+
+    line-size = 1
+    background = #000000
+
+    spacing = 1
+    padding-left = 1
+    padding-right = 1
+    module-margin-left = 1
+    module-margin-right = 1
+
+    font-0 = monospace:size=10:weight=regular;2
+    font-1 = Font Awesome 5 Brands:style=Regular:size=11;3
+    font-2 = Font Awesome 5 Free:style=Solid:size=10;3
+    font-3 = Font Awesome 5 Free:style=Regular:size=10;3
+    font-4 = Material Icons:size=12;4
+
+    ;tray-position = right
+    ;tray-offset-x = 0
+    ;tray-offset-y = 0
+    ;tray-padding = 2
+    ;tray-maxsize = 18
+    ;tray-scale = 1.0
+
+    modules-left = i3
 
 [module/i3]
     type = internal/i3
@@ -169,8 +207,8 @@
     type = internal/network
     interface = enp0s31f6
     interval = 3
-    format-connected = %{F#6b6b6b}%{F-}%{F#95cae3}<label-connected>%{F-}
-    format-disconnected = %{F#6b6b6b}%{F-} %{F#95cae3}<label-disconnected>%{F-}
+    format-connected = %{F#6b6b6b} %{F-}%{F#95cae3}<label-connected>%{F-}
+    format-disconnected = %{F#6b6b6b} %{F-}%{F#95cae3}<label-disconnected>%{F-}
     label-connected = %ifname%
     label-disconnected = ~
 

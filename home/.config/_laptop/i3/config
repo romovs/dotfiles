@@ -1,5 +1,13 @@
 # i3 config file (v4)
 
+# laptop
+#set $DISP1 eDP-1
+#set $DISP2 eDP-1
+
+# desktop
+set $DISP1 DP-0
+set $DISP2 DVI-D-1
+
 font pango:Droid Sans Mono 9
 
 # use these keys for focus, movement, and resize directions when reaching for the arrows is not convenient
@@ -112,16 +120,16 @@ bindsym Mod4+End exec mate-screenshot --interactive
 # calculator
 bindsym Mod4+C exec galculator
 
-workspace "1: www" output eDP-1
-workspace "2: sub" output eDP-1
-workspace "3: dev" output eDP-1
-workspace "4: fm" output eDP-1
-workspace "5: term" output eDP-1
-workspace "6: gfx" output eDP-1
-workspace "7: vm" output eDP-1
-workspace "8: misc" output eDP-1
-workspace "9: media" output eDP-1
-workspace "10: im" output eDP-1
+workspace "1: www" output $DISP1
+workspace "2: sub" output $DISP1
+workspace "3: dev" output $DISP1
+workspace "4: fm" output $DISP1
+workspace "5: term" output $DISP1
+workspace "6: gfx" output $DISP1
+workspace "7: vm" output $DISP1
+workspace "8: misc" output $DISP1
+workspace "9: media" output $DISP2
+workspace "10: im" output $DISP2
 
 assign [class="Firefox"] 1: www
 assign [instance="sublime"] 2: sub

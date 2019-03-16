@@ -14,8 +14,7 @@ dotfiles and fresh system installation instructions for personal use.
 
 ## Dnf
 ```
-dnf install galculator ghex gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncmpcpp google-droid-sans-fonts google-droid-sans-mono-fonts ffmpegthumbnailer kdiff3 zsh kernel-devel kernel-headers gcc mplayer aircrack-ng nmap darktable libsane-hpaio nemo cmake git xorg-x11-fonts-misc ImageMagick
-python3-cairo-devel cairo-gobject-devel gobject-introspection-devel dbus-glib-devel python3-devel xcb-proto xcb-util-devel xcb-util-wm-devel xcb-util-image-devel powerline-fonts sassc
+dnf install galculator ghex gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncmpcpp google-droid-sans-fonts google-droid-sans-mono-fonts ffmpegthumbnailer kdiff3 zsh kernel-devel kernel-headers gcc mplayer aircrack-ng nmap darktable libsane-hpaio nemo cmake git xorg-x11-fonts-misc ImageMagick python3-cairo-devel cairo-gobject-devel gobject-introspection-devel dbus-glib-devel python3-devel xcb-proto xcb-util-devel xcb-util-wm-devel xcb-util-image-devel powerline-fonts sassc cairo-devel xcb-util-devel xcb-proto xcb-util-image-devel xcb-util-wm-devely pulseaudio-libs-devel xcb-util-xrm-devel i3-ipc xcb-util-cursor-devel libnl3-devel rxvt-unicode papirus-icon-theme arc-theme
 ```
 
 ## i3 over mate
@@ -51,6 +50,10 @@ sudo ln -s $HOME/.oh-my-zsh /root/.oh-my-zsh
 sudo ln -s $HOME/.zshrc /root/.zshrc
 ```
 
+## Theme
+Icons - Papirus Dark (papirus-icon-theme)
+Theme - Arc Dark (arc-theme)
+
 ## Tools
 ```bash
 ln -s /opt/android-studio/bin/studio.sh /usr/local/bin/android
@@ -66,7 +69,7 @@ Reload X resources `xrdb ~/.Xresources`
 
 ## SmartGit
 smartgit - conflict resolver: kdiff3  
-arguemnts ${baseFile} ${leftFile} ${rightFile} -o ${mergedFile}
+arguments ${baseFile} ${leftFile} ${rightFile} -o ${mergedFile}
 
 ## Thinkpad throttle fix
 https://github.com/erpalma/lenovo-throttling-fix
