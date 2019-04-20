@@ -6,10 +6,10 @@
     margin-bottom = 5
 
 [bar/primary]
-    ; laptop
+    ;laptop
     ;monitor = eDP-1
-    ; desktop
-    monitor = DP-0
+    ;desktop
+    monitor = HDMI-0
     width = 100%
     height = 18
     offset-x = 0
@@ -46,7 +46,7 @@
     modules-right = eth wifi gmail skype battery keyboard pulseaudio cpu memory battery0 battery1 date bt
 
 [bar/secondary]
-    monitor = DVI-D-1
+    monitor = DP-0
     width = 100%
     height = 18
     offset-x = 0

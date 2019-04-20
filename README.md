@@ -71,8 +71,9 @@ Reload X resources `xrdb ~/.Xresources`
 smartgit - conflict resolver: kdiff3  
 arguments ${baseFile} ${leftFile} ${rightFile} -o ${mergedFile}
 
-## Thinkpad throttle fix
-https://github.com/erpalma/lenovo-throttling-fix
+## Thinkpad
+Throttle fix https://github.com/erpalma/lenovo-throttling-fix
+Custom boot logo https://www.reddit.com/r/thinkpad/comments/a57xhc/guide_custom_boot_logo_on_a_t480/
 
 ## Nemo
 ```

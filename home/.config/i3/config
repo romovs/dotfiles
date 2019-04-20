@@ -5,8 +5,8 @@
 #set $DISP2 eDP-1
 
 # desktop
-set $DISP1 DP-0
-set $DISP2 DVI-D-1
+set $DISP1 HDMI-0
+set $DISP2 DP-0
 
 font pango:Droid Sans Mono 9
 
@@ -114,8 +114,11 @@ bindsym Mod4+Shift+r restart
 bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 #screenshoter
-bindsym Mod4+Home exec mate-screenshot -w
-bindsym Mod4+End exec mate-screenshot --interactive
+#laptop
+#bindsym Mod4+Home exec mate-screenshot -w
+#bindsym Mod4+End exec mate-screenshot --interactive
+bindsym Mod4+Print exec mate-screenshot -w
+bindsym Mod4+Scroll_Lock exec mate-screenshot --interactive
 
 # calculator
 bindsym Mod4+C exec galculator
