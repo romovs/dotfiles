@@ -21,10 +21,10 @@ dnf install galculator ghex gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncm
 ## i3 over mate
 ### dconf-editor:
 org.mate.desktop.session.required-components windowmanager 'i3'  
-org.mate.desktop.background show-desktop-icons false  
 org.mate.desktop.session required-components-list ['windowmanager']  
 org.mate.desktop.session.required-components panel ''  
-org.mate.peripherals.keyboard.general disable-indicator true  
+org.mate.desktop.background show-desktop-icons false  
+org.mate.desktop.peripherals.keyboard.general disable-indicator true  
 
 Remove volume icon from tray: Startup Applicaions > Show Desktop Voulme control > false
 
@@ -58,9 +58,10 @@ Theme - Arc Dark (arc-theme)
 ## Tools
 ```bash
 ln -s /opt/android-studio/bin/studio.sh /usr/local/bin/android
-ln -s /opt/idea-IC-182.4892.20/bin/idea.sh /usr/local/bin/idea
+ln -s /opt/idea-IC-193.6911.18/bin/idea.sh /usr/local/bin/idea
 ln -s /opt/gitkraken/gitkraken.sh /usr/local/bin/gitkraken
 ln -s /opt/MineTime/minetime /usr/local/bin/minetime
+ln -s /opt/Telegram/Telegram /usr/local/bin/telegram
 ```
 
 ## Customization
