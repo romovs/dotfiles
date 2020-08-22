@@ -52,7 +52,7 @@ sudo ln -s $HOME/.zshrc /root/.zshrc
 ```
 
 ## Theme
-Icons - Papirus Dark (papirus-icon-theme)
+Icons - Papirus Dark (papirus-icon-theme)  
 Theme - Arc Dark (arc-theme)
 
 ## Tools
@@ -69,9 +69,9 @@ Copy icon into clipboard `echo -ne "\ue897" | xclip -selection clipboard`
 Reload X resources `xrdb ~/.Xresources`
 
 ## Thinkpad
-Throttle fix https://github.com/erpalma/lenovo-throttling-fix
-Custom boot logo https://www.reddit.com/r/thinkpad/comments/a57xhc/guide_custom_boot_logo_on_a_t480/
-WoL permanent disable (https://wiki.archlinux.org/index.php/Wake-on-LAN)
+Throttle fix https://github.com/erpalma/lenovo-throttling-fix  
+Custom boot logo https://www.reddit.com/r/thinkpad/comments/a57xhc/guide_custom_boot_logo_on_a_t480/  
+WoL permanent disable (https://wiki.archlinux.org/index.php/Wake-on-LAN)  
 ```
 vi /etc/udev/rules.d/81-wol.rules
 ACTION=="add", SUBSYSTEM=="net", NAME=="enp*", RUN+="/usr/sbin/ethtool -s $name wol d"
@@ -79,6 +79,7 @@ udevadm control --reload
 ```
 
 ## Nemo
+Disable recent files: `org.cinnamon.desktop.privacy remember-recent-files false`
 ```
 sudo rm -f /usr/share/nemo/actions/send-by-mail.nemo_action
 
