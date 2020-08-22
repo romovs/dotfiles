@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=retro
+Type=X-GNOME-Metatheme
+Comment=
+
+[X-GNOME-Metatheme]
+GtkTheme=oomox-arc-dark
+MetacityTheme=HighContrast
+IconTheme=Papirus-Dark
+GtkColorScheme=menu_bg: #404552
+CursorTheme=Adwaita
+CursorSize=24
+NotificationTheme=standard
+BackgroundImage=/home/rom/wallpapers/qSVrrdH.jpg
