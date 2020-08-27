@@ -1,0 +1,58 @@
+#!/bin/bash
+# split image file (flac, ape, wav, etc.) according to cue-file
+lame_opts=" --vbr-new -V 1 -b 320 -h "
+
+for fl in *.flac; do
+    i=0
+    for cuefile in *.cue; do
+        i=$(($i + 1))
+    done
+    if [ $i -eq 1 ]; then
+        # precies 1 cuesheet gevonden
+        if grep -q "INDEX 01 00:00:00" *.cue ; then
+            nice shntool split -t "%n %t" -f *.cue "$fl"
+        else
+            echo "The first track has a pre-gap. Shntool will cut that off and put it in a seperate file."
+            echo "You don't want that. Please modify the cuesheet from:"
+            grep -m1 "INDEX 00" *.cue
+            grep -m1 "INDEX 01" *.cue
+            echo "to:"
+            echo "    INDEX 01 00:00:00"
+            exit 1
+        fi
+    elif [ $i -eq 0 ]; then
+        echo "No cuesheet found in the current directory."
+        exit 1
+    elif [ $i -gt 1 ]; then
+        echo "$i cuesheets found in the current directory. Please remove the superfluous cuesheets."
+        exit 1
+    fi
+done
+
+echo
+
+PARENTFULL=`dirname "\`pwd\`"`
+
+album=`basename "\`pwd\`"`
+artist=`basename "$PARENTFULL"`
+
+convert -resize 108x front.jpg frontS.jpg
+
+for file in [0-9]*.wav; do
+
+    MP3="${file%.wav}.mp3"
+
+    echo "Encoding $file"
+
+    if [[ ${file:0:1} == 0 ]] ; then
+        tracknr=${file:1:1}
+    else
+        tracknr=${file:0:2}
+    fi
+    title=`echo ${file:2} | sed -e "s/.wav$//"`
+
+    lame ${lame_opts} --id3v2-only "$file" "$MP3" && rm "$file"
+    eyeD3 --v2 --encoding=utf16 --add-image=frontS.jpg:OTHER -a "$artist" -A "$album" -t "$title" -n "$tracknr" "$MP3"
+done
+
+    rm -f *.flac *.cue *.jpg

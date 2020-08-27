@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ALBUM=`basename "$PWD"`
+cd ..
+ARTIST=`basename "$PWD"`
+cd "$ALBUM"
+baudline "$ARTIST - $ALBUM.wav"
+flac -8 -V --tag=ALBUM="$ALBUM" --tag=ARTIST="$ARTIST" "$ARTIST - $ALBUM.wav"
+
