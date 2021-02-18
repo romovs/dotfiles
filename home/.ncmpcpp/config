@@ -14,7 +14,6 @@ browser_display_mode = classic
 search_engine_display_mode = classic
 playlist_editor_display_mode = classic
 progressbar_look = ■■□
-progressbar_boldness = yes
 ## Available values: database, playlist.
 default_place_to_search_in = database
 ## Available values: classic, alternative.
