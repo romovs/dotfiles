@@ -4,7 +4,8 @@ TERM=xterm
 ZSH_DISABLE_COMPFIX=true
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.cargo/bin:/opt/node-v8.12.0-linux-x64/bin:$HOME/projects/nim-0.19.0/bin:$PATH
+export PATH=$HOME/.cargo/bin:/opt/node-v12.22.2-linux-x64/bin:$PATH
+export DUMPSTR=true
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
