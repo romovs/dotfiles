@@ -2,17 +2,6 @@
 
 dotfiles and fresh system installation instructions for personal use.
 
-- i3-gaps (over mate)
-- polybar
-- termite
-- ncmpcpp (urxvt)
-- nemo
-- minetime
-- skype
-- intellij idea
-- sublime
-- sublime merge
-
 ## Dnf
 ```
 dnf remove pluma caja plymou* gnote
@@ -67,7 +56,7 @@ Icons - Papirus Dark (papirus-icon-theme)
 ```bash
 ln -s /opt/android-studio/bin/studio.sh /usr/local/bin/android
 ln -s /opt/idea-IC-211.7142.45/bin/idea.sh /usr/local/bin/idea
-ln -s /opt/MineTime/minetime /usr/local/bin/minetime
+ln -s /opt/Morgen/morgen /usr/local/bin/morgen
 ln -s /opt/Telegram/Telegram /usr/local/bin/telegram
 ```
 

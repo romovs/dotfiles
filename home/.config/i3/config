@@ -146,7 +146,7 @@ assign [class="Deluge"] 9: media
 assign [title="ncmpcpp"] 9: media
 assign [class="Skype"] 10: im
 assign [instance="mate-system-monitor"] 8: misc
-assign [instance="minetime"] 9: media
+assign [instance="morgen"] 9: media
 assign [instance="nemo"] 4: fm
 assign [instance="termite"] 5: term
 
@@ -235,7 +235,7 @@ exec_always --no-startup-id $HOME/.config/polybar/run.sh
 exec deluge
 exec urxvt -e ncmpcpp
 exec skypeforlinux
-exec minetime
+exec morgen
 exec subl
 exec termite
 exec nemo &
