@@ -66,8 +66,7 @@ Icons - Papirus Dark (papirus-icon-theme)
 ## Tools
 ```bash
 ln -s /opt/android-studio/bin/studio.sh /usr/local/bin/android
-ln -s /opt/idea-IC-193.6911.18/bin/idea.sh /usr/local/bin/idea
-ln -s /opt/gitkraken/gitkraken.sh /usr/local/bin/gitkraken
+ln -s /opt/idea-IC-211.7142.45/bin/idea.sh /usr/local/bin/idea
 ln -s /opt/MineTime/minetime /usr/local/bin/minetime
 ln -s /opt/Telegram/Telegram /usr/local/bin/telegram
 ```
@@ -81,10 +80,59 @@ Throttle fix https://github.com/erpalma/lenovo-throttling-fix
 Custom boot logo https://www.reddit.com/r/thinkpad/comments/a57xhc/guide_custom_boot_logo_on_a_t480/  
 WoL permanent disable (https://wiki.archlinux.org/index.php/Wake-on-LAN)  
 ```
-vi /etc/udev/rules.d/81-wol.rules
+$ vi /etc/udev/rules.d/81-wol.rules
+
 ACTION=="add", SUBSYSTEM=="net", NAME=="enp*", RUN+="/usr/sbin/ethtool -s $name wol d"
-udevadm control --reload
+
+$ udevadm control --reload
 ```
+
+Issue with keyboard backlight on Mate.
+https://github.com/mate-desktop/mate-desktop/issues/306
+https://wiki.archlinux.org/title/Keyboard_backlight
+
+```
+$ vi /usr/share/dbus-1/system.d/org.freedesktop.UPower.conf
+
+<?xml version="1.0" encoding="UTF-8"?> <!-- -*- XML -*- -->
+
+<!DOCTYPE busconfig PUBLIC
+ "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+<busconfig>
+  <!-- Only root can own the service -->
+  <policy user="root">
+    <allow own="org.freedesktop.UPower"/>
+  </policy>
+  <policy context="default">
+
+    <allow send_destination="org.freedesktop.UPower"
+           send_interface="org.freedesktop.DBus.Introspectable"/>
+
+    <allow send_destination="org.freedesktop.UPower"
+           send_interface="org.freedesktop.DBus.Peer"/>
+    <allow send_destination="org.freedesktop.UPower"
+           send_interface="org.freedesktop.DBus.Properties"/>
+    <allow send_destination="org.freedesktop.UPower.Device"
+           send_interface="org.freedesktop.DBus.Properties"/>
+    <deny send_destination="org.freedesktop.UPower.KbdBacklight"
+           send_interface="org.freedesktop.DBus.Properties"/>
+    <allow send_destination="org.freedesktop.UPower.Wakeups"
+           send_interface="org.freedesktop.DBus.Properties"/>
+
+    <allow send_destination="org.freedesktop.UPower"
+           send_interface="org.freedesktop.UPower"/>
+    <allow send_destination="org.freedesktop.UPower"
+           send_interface="org.freedesktop.UPower.Device"/>
+    <deny send_destination="org.freedesktop.UPower"
+           send_interface="org.freedesktop.UPower.KbdBacklight"/>
+    <allow send_destination="org.freedesktop.UPower"
+           send_interface="org.freedesktop.UPower.Wakeups"/>
+  </policy>
+</busconfig>
+
+```
+
 
 ## Nemo
 Disable recent files: `org.cinnamon.desktop.privacy remember-recent-files false`
