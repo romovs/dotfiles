@@ -20,7 +20,7 @@ set $right semicolon
 floating_modifier Mod4
 
 # start a terminal
-bindsym Mod4+Return exec termite
+bindsym Mod4+Return exec alacritty
 
 # kill focused window
 bindsym Mod4+Shift+q kill
@@ -137,6 +137,7 @@ workspace "10: im" output $DISP2
 assign [class="Firefox"] 1: www
 assign [instance="sublime"] 2: sub
 assign [class="jetbrains-idea"] 3: dev
+assign [instance="sublime_merge"] 3: dev
 assign [class="SmartGit"] 3: dev
 assign [class="GitKraken"] 3: dev
 assign [instance="gimp"] 6: gfx
@@ -145,25 +146,26 @@ assign [title=".*Oracle VM VirtualBox : 2$"] 8: misc
 assign [class="Deluge"] 9: media
 assign [title="ncmpcpp"] 9: media
 assign [class="Skype"] 10: im
+assign [instance="telegram"] 10: im
 assign [instance="mate-system-monitor"] 8: misc
 assign [instance="morgen"] 9: media
 assign [instance="nemo"] 4: fm
-assign [instance="termite"] 5: term
+assign [instance="Alacritty"] 5: term
 
 for_window [class="Firefox"] layout tabbed
 for_window [class="jetbrains-idea"] layout tabbed
-for_window [class="SmartGit"] layout tabbed
+for_window [class="sublime_merge"] layout tabbed
 for_window [instance="VirtualBox"] layout tabbed
 for_window [class="Steam"] floating enable
 for_window [class="Steam" title="^Steam$"] floating disable
 for_window [class="^Galculator$"] floating enable
-for_window [instance="hnh"] floating enable
 for_window [class="Deluge"] layout tabbed
 for_window [title="ncmpcpp"] layout splith
-for_window [class="Skype"] layout splith
+for_window [class="Skype"] layout tabbed
+for_window [instance="telegram"] layout tabbed
 for_window [instance="discord"] layout splith
 for_window [instance="nemo"] layout splith
-for_window [instance="termite"] layout splith
+for_window [instance="Alacritty"] layout splith
 for_window [class="sublime" instance="sublime"] layout splith
 
 for_window [class="."] focus
@@ -237,6 +239,6 @@ exec urxvt -e ncmpcpp
 exec skypeforlinux
 exec morgen
 exec subl
-exec termite
+exec alacritty
 exec nemo &
 exec firefox

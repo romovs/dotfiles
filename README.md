@@ -4,13 +4,16 @@ dotfiles and fresh system installation instructions for personal use.
 
 ## Dnf
 ```
-dnf remove pluma caja plymou* gnote
+dnf remove parole thunderbird hexchat transmission-gtk abrt selinux* mate-calc blivet-gui gnote
 ```
 ```
-dnf install galculator ghex gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncmpcpp google-droid-sans-fonts google-droid-sans-mono-fonts ffmpegthumbnailer kdiff3 zsh kernel-devel kernel-headers gcc mpv aircrack-ng nmap darktable libsane-hpaio nemo nemo-fileroller cmake git xorg-x11-fonts-misc ImageMagick python3-cairo-devel cairo-gobject-devel gobject-introspection-devel dbus-glib-devel python3-devel xcb-proto xcb-util-devel xcb-util-wm-devel xcb-util-image-devel powerline-fonts sassc cairo-devel xcb-util-devel xcb-proto xcb-util-image-devel pulseaudio-libs-devel xcb-util-xrm-devel xcb-util-cursor-devel libnl3-devel rxvt-unicode papirus-icon-theme arc-theme gstreamer1-vaapi libva-intel-driver libva-utils libva-vdpau-driver libvdpau-va-gl VirtualBox libreoffice-calc
+dnf remove caja pluma plymou* 
 ```
 ```
-dnf install polybar rofi termite i3-gaps 
+dnf install galculator gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncmpcpp google-droid-sans-fonts google-droid-sans-mono-fonts ffmpegthumbnailer kdiff3 zsh kernel-devel kernel-headers gcc mpv nmap darktable libsane-hpaio nemo nemo-fileroller cmake git powerline-fonts papirus-icon-theme arc-theme VirtualBox libreoffice-calc libreoffice-writer dkms acpid libglvnd-devel vdpauinfo libva-vdpau-driver libva-utils alacritty avidemux ImageMagick flacon
+```
+```
+dnf install polybar rofi i3-gaps 
 ```
 
 ## i3 over mate
@@ -47,10 +50,9 @@ sudo ln -s $HOME/.zshrc /root/.zshrc
 ```
 
 ## Theme
-Theme - Retro
-Font  - Droid Sans Regular 10
+Theme - Retro  
+Font  - Droid Sans Regular 10  
 Icons - Papirus Dark (papirus-icon-theme)  
-
 
 ## Tools
 ```bash

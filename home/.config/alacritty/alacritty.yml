@@ -1,0 +1,31 @@
+# Font configuration
+font:
+  normal:
+    family: Droid Sans Mono
+  size: 10
+
+colors:
+  # Default colors
+  primary:
+    background: '0x090c1c'
+    foreground: '0x95cae3'
+  # Normal colors
+  normal:
+    black:   '0x090c1c'
+    red:     '0xd962db'
+    green:   '0xE06D89'
+    yellow:  '0xe83375'
+    blue:    '0xfecdaf'
+    magenta: '0x99ba92'
+    cyan:    '0xE06D89'
+    white:   '0x95cae3'
+  # Bright colors
+  bright:
+    black:   '0x688d9e'
+    red:     '0x95364D'
+    green:   '0xe8727f'
+    yellow:  '0xe78fe8'
+    blue:    '0xc9d47f'
+    magenta: '0x99ba92'
+    cyan:    '0xE06D89'
+    white:   '0x95cae3'

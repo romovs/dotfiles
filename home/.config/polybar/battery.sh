@@ -8,8 +8,8 @@
 #POWER=$(((BAT0_POWER + BAT1_POWER) / 2))
 
 #desktop
-BAT_STATE=$(upower -i $(upower -e | grep 'ups_hiddev1') | grep -E "state" | awk '{print $2}')
-POWER=$(upower -i $(upower -e | grep 'ups_hiddev1') | grep -E "percentage" | awk '{print $2}' | tr -d '%')
+BAT_STATE=$(upower -i $(upower -e | grep 'ups_hiddev0') | grep -E "state" | awk '{print $2}')
+POWER=$(upower -i $(upower -e | grep 'ups_hiddev0') | grep -E "percentage" | awk '{print $2}' | tr -d '%')
 
 
 POWER_PADDED=$(printf "%3s" $POWER)

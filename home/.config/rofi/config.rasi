@@ -1,0 +1,31 @@
+* {
+    background:                  #090c1c;
+    normal-background:           @background;
+    alternate-normal-background: #090c1c;
+    alternate-urgent-background: #090c1c;
+    foreground:                  #ee5364;
+    normal-foreground:           @foreground;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  #95cae3;
+    selected-normal-foreground:  #090c1c;
+    selected-urgent-foreground:  #090c1c;
+    separatorcolor:              #852f39;
+}
+#window {
+    background-color: @background;
+    border-color:     #ee5364;
+    border:           1;
+    padding:          5;
+}
+#mainbox {
+    border:  0;
+    padding: 0;
+}
+#listview {
+    fixed-height: 0;
+    border:       2px 0px 0px ;
+    border-color: @separatorcolor;
+    spacing:      2px ;
+    scrollbar:    false;
+    padding:      2px 0px 0px ;
+}
