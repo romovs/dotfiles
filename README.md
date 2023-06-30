@@ -10,7 +10,7 @@ dnf remove parole thunderbird hexchat transmission-gtk abrt selinux* mate-calc b
 dnf remove caja pluma plymou* 
 ```
 ```
-dnf install galculator gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncmpcpp google-droid-sans-fonts google-droid-sans-mono-fonts ffmpegthumbnailer kdiff3 zsh kernel-devel kernel-headers gcc mpv nmap darktable libsane-hpaio nemo nemo-fileroller cmake git powerline-fonts papirus-icon-theme arc-theme VirtualBox libreoffice-calc libreoffice-writer dkms acpid libglvnd-devel vdpauinfo libva-vdpau-driver libva-utils alacritty avidemux ImageMagick flacon
+dnf install galculator gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncmpcpp google-droid-sans-fonts google-droid-sans-mono-fonts ffmpegthumbnailer kdiff3 zsh kernel-devel kernel-headers gcc mpv nmap darktable libsane-hpaio nemo nemo-fileroller cmake git powerline-fonts papirus-icon-theme arc-theme VirtualBox libreoffice-calc libreoffice-writer dkms acpid libglvnd-devel vdpauinfo libva-vdpau-driver libva-utils alacritty avidemux ImageMagick flacon libva-intel-driver intel-media-driver
 ```
 ```
 dnf install polybar rofi i3-gaps 
