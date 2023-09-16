@@ -1,8 +1,11 @@
 #!/bin/bash
 
-# Fn+L - low profile
+# Fn+L - low power
 # Fn+M - balanced
 # Fn+H - performance
+
+# list of available modes is available from:
+# cat /sys/firmware/acpi/platform_profile_choices
 
 PROFILE=$(cat /sys/firmware/acpi/platform_profile)
 
