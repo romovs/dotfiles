@@ -3,28 +3,27 @@
 dotfiles and fresh system installation instructions for personal use.
 
 ## Dnf
+```bash
+sudo dnf remove parole thunderbird hexchat transmission-gtk abrt selinux* mate-calc blivet-gui gnote caja pluma plymou*
 ```
-dnf remove parole thunderbird hexchat transmission-gtk abrt selinux* mate-calc blivet-gui gnote
+```bash
+sudo dnf install ffmpeg galculator gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncmpcpp google-droid-sans-fonts google-droid-sans-mono-fonts ffmpegthumbnailer kdiff3 zsh kernel-devel kernel-headers gcc mpv nmap darktable libsane-hpaio nemo nemo-fileroller cmake git powerline-fonts papirus-icon-theme arc-theme VirtualBox libreoffice-calc libreoffice-writer dkms acpid libglvnd-devel vdpauinfo libva-vdpau-driver libva-utils alacritty avidemux ImageMagick flacon libva-intel-driver intel-media-driver gstreamer1-vaapi
 ```
+```bash
+sudo dnf install polybar rofi i3
 ```
-dnf remove caja pluma plymou* 
-```
-```
-dnf install galculator gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncmpcpp google-droid-sans-fonts google-droid-sans-mono-fonts ffmpegthumbnailer kdiff3 zsh kernel-devel kernel-headers gcc mpv nmap darktable libsane-hpaio nemo nemo-fileroller cmake git powerline-fonts papirus-icon-theme arc-theme VirtualBox libreoffice-calc libreoffice-writer dkms acpid libglvnd-devel vdpauinfo libva-vdpau-driver libva-utils alacritty avidemux ImageMagick flacon libva-intel-driver intel-media-driver
-```
-```
-dnf install polybar rofi i3-gaps 
-```
+
+If no EAC3 codec support then remove `ffmpeg-free` from Fedora repos and isntall `ffmpeg` from RPMFusion.
+
 
 ## i3 over mate
-### dconf-editor:
-org.mate.desktop.session.required-components windowmanager 'i3'  
-org.mate.desktop.session required-components-list ['windowmanager']  
-org.mate.desktop.session.required-components panel ''  
-org.mate.desktop.background show-desktop-icons false  
-org.mate.desktop.peripherals.keyboard.general disable-indicator true  
-
-Remove volume icon from tray: Startup Applicaions > Show Desktop Voulme control > false
+```bash
+gsettings set org.mate.session.required-components windowmanager 'i3'
+gsettings set org.mate.session required-components-list "['windowmanager']"
+gsettings set org.mate.session.required-components panel ''
+gsettings set org.mate.background show-desktop-icons false
+gsettings set org.mate.peripherals-keyboard-xkb.general disable-indicator true
+```
 
 ## Firefox extensions
 https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/           (see external file for custom filters)  
@@ -43,7 +42,7 @@ https://addons.mozilla.org/en-US/firefox/addon/youtube_downloader_webx/
 
 ## Zsh
 https://github.com/robbyrussell/oh-my-zsh
-```
+```bash
 sudo chsh -s /bin/zsh root
 sudo ln -s $HOME/.oh-my-zsh /root/.oh-my-zsh
 sudo ln -s $HOME/.zshrc /root/.zshrc
@@ -56,10 +55,10 @@ Icons - Papirus Dark (papirus-icon-theme)
 
 ## Tools
 ```bash
-ln -s /opt/android-studio/bin/studio.sh /usr/local/bin/android
-ln -s /opt/idea-IC-211.7142.45/bin/idea.sh /usr/local/bin/idea
-ln -s /opt/Morgen/morgen /usr/local/bin/morgen
-ln -s /opt/Telegram/Telegram /usr/local/bin/telegram
+sudo ln -s /opt/android-studio/bin/studio.sh /usr/local/bin/android
+sudo ln -s /opt/idea-IC-211.7142.45/bin/idea.sh /usr/local/bin/idea
+sudo ln -s /opt/Morgen/morgen /usr/local/bin/morgen
+sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram
 ```
 
 ## Customization
@@ -126,8 +125,11 @@ $ vi /usr/share/dbus-1/system.d/org.freedesktop.UPower.conf
 
 
 ## Nemo
-Disable recent files: `org.cinnamon.desktop.privacy remember-recent-files false`
+Disable recent files: 
+```bash
+gsettings set org.cinnamon.desktop.privacy remember-recent-files false`
 ```
+```bash
 sudo rm -f /usr/share/nemo/actions/send-by-mail.nemo_action
 
 ```
