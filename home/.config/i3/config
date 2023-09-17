@@ -135,7 +135,7 @@ workspace "9: media" output $DISP2
 workspace "10: im" output $DISP2
 
 assign [class="Firefox"] 1: www
-assign [instance="sublime"] 2: sub
+assign [class="sublime" instance="sublime"] 2: sub
 assign [class="jetbrains-idea"] 3: dev
 assign [instance="sublime_merge"] 3: dev
 assign [class="SmartGit"] 3: dev
@@ -236,7 +236,7 @@ exec mpd
 exec_always --no-startup-id $HOME/.config/polybar/run.sh
 exec deluge
 exec urxvt -e ncmpcpp
-exec skypeforlinux
+#exec skypeforlinux
 exec morgen
 exec subl
 exec alacritty
