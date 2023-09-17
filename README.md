@@ -77,6 +77,15 @@ ACTION=="add", SUBSYSTEM=="net", NAME=="enp*", RUN+="/usr/sbin/ethtool -s $name 
 $ udevadm control --reload
 ```
 
+Disble NMI Watchdog:
+```
+sudo vi /etc/default/grub
+
+GRUB_CMDLINE_LINUX="rhgb quiet nmi_watchdog=0"
+
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+```
+
 Issue with keyboard backlight on Mate.
 https://github.com/mate-desktop/mate-desktop/issues/306
 https://wiki.archlinux.org/title/Keyboard_backlight
