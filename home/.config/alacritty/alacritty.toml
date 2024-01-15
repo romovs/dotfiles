@@ -1,0 +1,29 @@
+[colors.bright]
+black = "0x688d9e"
+blue = "0xc9d47f"
+cyan = "0xE06D89"
+green = "0xe8727f"
+magenta = "0x99ba92"
+red = "0x95364D"
+white = "0x95cae3"
+yellow = "0xe78fe8"
+
+[colors.normal]
+black = "0x090c1c"
+blue = "0xfecdaf"
+cyan = "0xE06D89"
+green = "0xE06D89"
+magenta = "0x99ba92"
+red = "0xd962db"
+white = "0x95cae3"
+yellow = "0xe83375"
+
+[colors.primary]
+background = "0x090c1c"
+foreground = "0x95cae3"
+
+[font]
+size = 10
+
+[font.normal]
+family = "Droid Sans Mono"
