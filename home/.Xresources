@@ -52,6 +52,7 @@ URxvt.font:             xft:Droid Sans Mono:pixelsize=13:Regular
 URxvt.boldFont:         xft:monospace:pixelsize=13:Bold
 URxvt.italicFont:       xft:monospace:pixelsize=13:Italic
 URxvt.boldItalicFont:   xft:monospace:pixelsize=13:Bold:Italic
+URxvt*.termName: 		rxvt
 
 *foreground:        #95cae3
 *background:        #090c1c
@@ -62,10 +63,10 @@ emacs*background:   #090c1c
 URxvt*foreground:   #95cae3
 XTerm*foreground:   #95cae3
 UXTerm*foreground:  #95cae3
-URxvt*background:   [100]#090c1c
+URxvt*background:   #090c1c
 XTerm*background:   #090c1c
 UXTerm*background:  #090c1c
 URxvt*cursorColor:  #95cae3
 XTerm*cursorColor:  #95cae3
 UXTerm*cursorColor: #95cae3
-URxvt*borderColor:  [100]#090c1c
+URxvt*borderColor:  #090c1c

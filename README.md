@@ -13,6 +13,10 @@ sudo dnf install ffmpeg galculator gcc-c++ gimp wireshark deluge unrar flac mpd 
 sudo dnf install polybar rofi i3
 ```
 
+```bash
+sudo ln -s /var/lib/snapd/snap/bin/skype /usr/sbin/skype
+```
+
 If no EAC3 codec support then remove `ffmpeg-free` from Fedora repos and isntall `ffmpeg` from RPMFusion.
 
 

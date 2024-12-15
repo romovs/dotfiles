@@ -27,7 +27,7 @@ bindsym Mod4+Shift+q kill
 
 # rofi
 bindsym Mod4+F1 exec zsh -c "rofi -show run"
-bindsym Mod4+F2 exec zsh -c "rofi -show drun"
+bindsym Mod4+F2 exec zsh -c "$HOME/.config/rofi/apps.sh"
 bindsym Mod4+F3 exec zsh -c "rofi -show window"
 
 # change focus
@@ -93,6 +93,8 @@ bindsym Mod4+7 workspace 7: vm
 bindsym Mod4+8 workspace 8: misc
 bindsym Mod4+9 workspace 9: media
 bindsym Mod4+0 workspace 10: im
+bindsym Mod4+Ctrl+1 workspace 11: cal
+bindsym Mod4+Ctrl+2 workspace 12: monitor
 
 # move focused container to workspace
 bindsym Mod4+Shift+1 move container to workspace number 1: www
@@ -105,6 +107,8 @@ bindsym Mod4+Shift+7 move container to workspace number 7: vm
 bindsym Mod4+Shift+8 move container to workspace number 8: misc
 bindsym Mod4+Shift+9 move container to workspace number 9: media
 bindsym Mod4+Shift+0 move container to workspace number 10: im
+bindsym Mod4+Ctrl+Shift+1 move container to workspace number 11: cal
+bindsym Mod4+Ctrl+Shift+2 move container to workspace number 12: monitor
 
 # reload the configuration file
 bindsym Mod4+Shift+c reload
@@ -123,6 +127,9 @@ bindsym Mod4+Scroll_Lock exec mate-screenshot --interactive
 # calculator
 bindsym Mod4+C exec galculator
 
+# lock
+bindsym Mod4+Escape exec dm-tool lock
+
 workspace "1: www" output $DISP1
 workspace "2: sub" output $DISP1
 workspace "3: dev" output $DISP1
@@ -133,6 +140,8 @@ workspace "7: vm" output $DISP1
 workspace "8: misc" output $DISP1
 workspace "9: media" output $DISP2
 workspace "10: im" output $DISP2
+workspace "11: cal" output $DISP2
+workspace "12: monitor" output $DISP2
 
 assign [class="Firefox"] 1: www
 assign [class="sublime" instance="sublime"] 2: sub
@@ -147,8 +156,8 @@ assign [class="Deluge"] 9: media
 assign [title="ncmpcpp"] 9: media
 assign [class="Skype"] 10: im
 assign [instance="telegram"] 10: im
-assign [instance="mate-system-monitor"] 8: misc
-assign [instance="morgen"] 9: media
+assign [title="btm"] 12: monitor
+assign [instance="morgen"] 11: cal
 assign [instance="nemo"] 4: fm
 assign [instance="Alacritty"] 5: term
 
@@ -236,7 +245,6 @@ exec mpd
 exec_always --no-startup-id $HOME/.config/polybar/run.sh
 exec deluge
 exec urxvt -e ncmpcpp
-#exec skypeforlinux
 exec morgen
 exec subl
 exec alacritty
