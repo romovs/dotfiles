@@ -6,7 +6,7 @@ FIELDS=SSID,BSSID,CHAN,FREQ,RATE,SIGNAL,BARS,SECURITY,DEVICE
 POSITION=3
 YOFF=28
 XOFF=-2
-FONT="Droid Sans Mono 12"
+FONT="Droid Sans Mono 11"
 HEADERLINES=2
 MAXSSIDS=14
 
@@ -81,10 +81,15 @@ enabled() {
         if [[ $(echo "$KNOWNCON" | grep "$CHSSID") = "$CHSSID" ]]; then
             nmcli con up "$CHSSID"
         else
-            if [[ "$CHENTRY" =~ "WPA2" ]] || [[ "$CHENTRY" =~ "WEP" ]]; then
-                WIFIPASS=$(echo "if connection is stored, hit enter" | rofi -dmenu -p "password" -lines 1 -font "$FONT" )
+            if [[ "$CHENTRY" =~ "WPA2" ]] || [[ "$CHENTRY" =~ "WPA1" ]] || [[ "$CHENTRY" =~ "WEP" ]]; then
+                WIFIPASS=$(echo "if connection is stored, hit enter" | rofi -dmenu -p "password" -lines 1 -font "$FONT")
             fi
-            nmcli dev wifi con "$CHSSID" password "$WIFIPASS"
+
+            if [ "$WIFIPASS" = "" ]; then
+                nmcli dev wifi con "$CHSSID"
+            else
+                nmcli dev wifi con "$CHSSID" password "$WIFIPASS"
+            fi
         fi
     fi
 }

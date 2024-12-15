@@ -94,7 +94,8 @@ bindsym Mod4+8 workspace 8: misc
 bindsym Mod4+9 workspace 9: media
 bindsym Mod4+0 workspace 10: im
 bindsym Mod4+Ctrl+1 workspace 11: cal
-bindsym Mod4+Ctrl+2 workspace 12: monitor
+bindsym Mod4+Ctrl+2 workspace 12: mon
+bindsym Mod4+Ctrl+3 workspace 13: git
 
 # move focused container to workspace
 bindsym Mod4+Shift+1 move container to workspace number 1: www
@@ -108,7 +109,8 @@ bindsym Mod4+Shift+8 move container to workspace number 8: misc
 bindsym Mod4+Shift+9 move container to workspace number 9: media
 bindsym Mod4+Shift+0 move container to workspace number 10: im
 bindsym Mod4+Ctrl+Shift+1 move container to workspace number 11: cal
-bindsym Mod4+Ctrl+Shift+2 move container to workspace number 12: monitor
+bindsym Mod4+Ctrl+Shift+2 move container to workspace number 12: mon
+bindsym Mod4+Ctrl+Shift+3 move container to workspace number 13: git
 
 # reload the configuration file
 bindsym Mod4+Shift+c reload
@@ -141,29 +143,41 @@ workspace "8: misc" output $DISP1
 workspace "9: media" output $DISP2
 workspace "10: im" output $DISP2
 workspace "11: cal" output $DISP2
-workspace "12: monitor" output $DISP2
+workspace "12: mon" output $DISP2
+workspace "13: git" output $DISP2
 
 assign [class="Firefox"] 1: www
-assign [class="sublime" instance="sublime"] 2: sub
+assign [class="google-chrome"] 1: www
+
+assign [class="Sublime_text" instance="sublime_text"] 2: sub
+
 assign [class="jetbrains-idea"] 3: dev
-assign [instance="sublime_merge"] 3: dev
-assign [class="SmartGit"] 3: dev
-assign [class="GitKraken"] 3: dev
+
+assign [instance="nemo"] 4: fm
+
+assign [instance="Alacritty" title="^(?!btm)"] 5: term
+
 assign [instance="gimp"] 6: gfx
+
 assign [instance="VirtualBox" title="^(?!.*Oracle VM VirtualBox : 2.*).*$"] 7: vm
-assign [title=".*Oracle VM VirtualBox : 2$"] 8: misc
+assign [title=".*Oracle VM VirtualBox : 2$"] 7: vm
+
 assign [class="Deluge"] 9: media
 assign [title="ncmpcpp"] 9: media
+
 assign [class="Skype"] 10: im
 assign [instance="telegram"] 10: im
-assign [title="btm"] 12: monitor
+
 assign [instance="morgen"] 11: cal
-assign [instance="nemo"] 4: fm
-assign [instance="Alacritty"] 5: term
+
+assign [title="btm"] 12: mon
+
+assign [class="Sublime_merge" instance="sublime_merge"] 13: git
+
 
 for_window [class="Firefox"] layout tabbed
 for_window [class="jetbrains-idea"] layout tabbed
-for_window [class="sublime_merge"] layout tabbed
+for_window [class="Sublime_merge"] layout tabbed
 for_window [instance="VirtualBox"] layout tabbed
 for_window [class="Steam"] floating enable
 for_window [class="Steam" title="^Steam$"] floating disable
@@ -172,10 +186,8 @@ for_window [class="Deluge"] layout tabbed
 for_window [title="ncmpcpp"] layout splith
 for_window [class="Skype"] layout tabbed
 for_window [instance="telegram"] layout tabbed
-for_window [instance="discord"] layout splith
 for_window [instance="nemo"] layout splith
 for_window [instance="Alacritty"] layout splith
-for_window [class="sublime" instance="sublime"] layout splith
 
 for_window [class="."] focus
 for_window [instance="gimp"] focus
