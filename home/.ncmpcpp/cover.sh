@@ -11,7 +11,7 @@ cover="$(find "$dir" -type d -exec find {} -maxdepth 1 -type f -iregex ".*\.\(jp
 filename=$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 32)
 
 if [[ -n "$cover" ]] ; then
-    convert "$cover" -resize 370 /tmp/${filename}.jpg
+    magick "$cover" -resize 370 /tmp/${filename}.jpg
     echo -e "\e]20;/tmp/${filename}.jpg;0x0+99+93:op=keep-aspect\a\n"
     # remove the image so we won't have tons of temp files lying around
     rm /tmp/${filename}.jpg
