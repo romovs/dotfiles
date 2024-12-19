@@ -10,9 +10,9 @@ if [[ "${CPU}" -gt 90 ]]; then
 elif [[ "${CPU}" -gt 75 ]]; then
     CPU_CLR="%{F#e60053}"
 elif [[ "${CPU}" -gt 60 ]]; then
-    CPU_CLR="%{F#e6db74}"
+    CPU_CLR="%{F#f9e2af}"
 elif [[ "${CPU}" -gt 50 ]]; then
-    CPU_CLR="%{F#e6db74}"
+    CPU_CLR="%{F#f9e2af}"
 elif [[ "${CPU}" -le 50 ]]; then
     CPU_CLR="%{F#95cae3}"
 fi
@@ -22,9 +22,9 @@ if [[ "${NVME}" -gt 90 ]]; then
 elif [[ "${NVME}" -gt 75 ]]; then
     NVME_CLR="%{F#e60053}"
 elif [[ "${NVME}" -gt 60 ]]; then
-    NVME_CLR="%{F#e6db74}"
+    NVME_CLR="%{F#f9e2af}"
 elif [[ "${NVME}" -gt 50 ]]; then
-    NVME_CLR="%{F#e6db74}"
+    NVME_CLR="%{F#f9e2af}"
 elif [[ "${NVME}" -le 50 ]]; then
     NVME_CLR="%{F#95cae3}"
 fi

@@ -37,14 +37,12 @@ https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/           (see ext
 https://addons.mozilla.org/en-US/firefox/addon/youtube_downloader_webx/
 
 ## Sublime
-- Theme: Agila Theme (select Agila Neon.sublime-theme)
-- Color Scheme: Monokai Black https://github.com/matkl/Monokai-Black
+- Theme: Adaptive
+- Color Scheme: Catppuccin
 - A File Icon
-- Trailling Spaces
-- Color Highlight
-- SASS
+- TrailingSpaces 
+- ColorHelper
 - BracketHighlighter
-- AllAutocomplete
 - SideBarEnhancements
 
 ## Zsh
