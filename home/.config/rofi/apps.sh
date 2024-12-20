@@ -2,7 +2,7 @@
 
 MAP="$HOME/.config/rofi/apps.csv"
 
-MENU=$(cat "$MAP" | cut -d ',' -f 1)
+MENU=$(cat "$MAP" | cut -d ',' -f 1 | tr -d "\n")
 
 echo -e $MENU \
     | rofi -dmenu -i -show-icons -p "launch" \
