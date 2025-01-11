@@ -253,6 +253,7 @@ client.urgent           #000000   #e60053   #fefbec   #e60053   #e60053
 client.placeholder      #000000   #0c0c0c   #888888   #000000   #e60053
 client.background       #000000
 
+exec wired
 exec mpd
 exec_always --no-startup-id $HOME/.config/polybar/run.sh
 exec deluge

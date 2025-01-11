@@ -4,7 +4,7 @@ dotfiles and fresh system installation instructions for personal use.
 
 ## Dnf
 ```bash
-sudo dnf remove parole thunderbird hexchat transmission-gtk abrt selinux* mate-calc blivet-gui gnote caja pluma plymou*
+sudo dnf remove parole thunderbird hexchat transmission-gtk abrt selinux* mate-calc blivet-gui gnote caja pluma plymou* mate-system-monitor 
 ```
 ```bash
 sudo dnf copr enable atim/bottom -y
@@ -19,6 +19,8 @@ sudo dnf install polybar rofi i3
 ```bash
 sudo ln -s /var/lib/snapd/snap/bin/skype /usr/sbin/skype
 ```
+
+Install: `https://github.com/Toqozz/wired-notify`
 
 If no EAC3 codec support then remove `ffmpeg-free` from Fedora repos and isntall `ffmpeg` from RPMFusion.
 
