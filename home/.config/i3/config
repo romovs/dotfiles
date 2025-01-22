@@ -5,8 +5,9 @@
 #set $DISP2 eDP-1
 
 # desktop
-set $DISP1 HDMI-0
+set $DISP1 DP-2
 set $DISP2 DP-0
+set $DISP3 HDMI-0
 
 font pango:Droid Sans Mono 9
 
@@ -96,6 +97,7 @@ bindsym Mod4+0 workspace 10: im
 bindsym Mod4+Ctrl+1 workspace 11: cal
 bindsym Mod4+Ctrl+2 workspace 12: mon
 bindsym Mod4+Ctrl+3 workspace 13: git
+bindsym Mod4+Ctrl+0 workspace 14: large
 
 # move focused container to workspace
 bindsym Mod4+Shift+1 move container to workspace number 1: www
@@ -111,6 +113,7 @@ bindsym Mod4+Shift+0 move container to workspace number 10: im
 bindsym Mod4+Ctrl+Shift+1 move container to workspace number 11: cal
 bindsym Mod4+Ctrl+Shift+2 move container to workspace number 12: mon
 bindsym Mod4+Ctrl+Shift+3 move container to workspace number 13: git
+bindsym Mod4+Ctrl+Shift+0 move container to workspace number 14: large
 
 # reload the configuration file
 bindsym Mod4+Shift+c reload
@@ -132,6 +135,8 @@ bindsym Mod4+C exec galculator
 # lock
 bindsym Mod4+Escape exec dm-tool lock
 
+# ############################################################
+
 workspace "1: www" output $DISP1
 workspace "2: sub" output $DISP1
 workspace "3: dev" output $DISP1
@@ -140,11 +145,17 @@ workspace "5: term" output $DISP1
 workspace "6: gfx" output $DISP1
 workspace "7: vm" output $DISP1
 workspace "8: misc" output $DISP1
+
 workspace "9: media" output $DISP2
 workspace "10: im" output $DISP2
 workspace "11: cal" output $DISP2
 workspace "12: mon" output $DISP2
-workspace "13: git" output $DISP2
+
+workspace "13: git" output $DISP1
+
+workspace "14: large" output $DISP3
+
+# ############################################################
 
 assign [class="Firefox"] 1: www
 assign [class="google-chrome"] 1: www

@@ -4,20 +4,13 @@ dotfiles and fresh system installation instructions for personal use.
 
 ## Dnf
 ```bash
-sudo dnf remove parole thunderbird hexchat transmission-gtk abrt selinux* mate-calc blivet-gui gnote caja pluma plymou* mate-system-monitor 
+sudo dnf remove parole thunderbird hexchat transmission-gtk abrt ffmpeg-free mate-calc blivet-gui gnote caja pluma plymou* mate-system-monitor 
 ```
 ```bash
 sudo dnf copr enable atim/bottom -y
 ```
 ```bash
-sudo dnf install ffmpeg galculator gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncmpcpp google-droid-sans-fonts google-droid-sans-mono-fonts ffmpegthumbnailer kdiff3 zsh kernel-devel kernel-headers gcc mpv nmap darktable libsane-hpaio nemo nemo-fileroller cmake git powerline-fonts papirus-icon-theme arc-theme VirtualBox libreoffice-calc libreoffice-writer dkms acpid libglvnd-devel vdpauinfo libva-vdpau-driver libva-utils alacritty avidemux ImageMagick flacon libva-intel-driver intel-media-driver gstreamer1-vaapi fuse
-```
-```bash
-sudo dnf install polybar rofi i3
-```
-
-```bash
-sudo ln -s /var/lib/snapd/snap/bin/skype /usr/sbin/skype
+sudo dnf install ffmpeg hplip-gui galculator gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncmpcpp google-droid-sans-fonts google-droid-sans-mono-fonts ffmpegthumbnailer kdiff3 zsh kernel-devel kernel-headers gcc mpv nmap darktable libsane-hpaio nemo nemo-fileroller cmake git powerline-fonts papirus-icon-theme papirus-icon-theme-dark arc-theme VirtualBox libreoffice-calc libreoffice-writer dkms acpid libglvnd-devel vdpauinfo libva-vdpau-driver libva-utils alacritty avidemux ImageMagick flacon libva-intel-driver intel-media-driver gstreamer1-vaapi fuse polybar rofi i3
 ```
 
 Install: `https://github.com/Toqozz/wired-notify`
@@ -46,6 +39,7 @@ https://addons.mozilla.org/en-US/firefox/addon/youtube_downloader_webx/
 - ColorHelper
 - BracketHighlighter
 - SideBarEnhancements
+- RON
 
 ## Zsh
 https://github.com/robbyrussell/oh-my-zsh
@@ -58,7 +52,7 @@ sudo ln -s $HOME/.zshrc /root/.zshrc
 ## Theme
 Theme - Retro  
 Font  - Droid Sans Regular 10  
-Icons - Papirus Dark (papirus-icon-theme)  
+Icons - Papirus Dark (papirus-icon-theme-dark)  
 
 ## Icons for Rofi
 https://github.com/bikass/kora 
@@ -70,6 +64,8 @@ sudo ln -s /opt/android-studio/bin/studio.sh /usr/local/bin/android
 sudo ln -s /opt/idea-IC-211.7142.45/bin/idea.sh /usr/local/bin/idea
 sudo ln -s /opt/Morgen/morgen /usr/local/bin/morgen
 sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram
+sudo ln -s ~/projects/wired-notify/target/release/wired /usr/sbin/wired
+sudo ln -s /var/lib/snapd/snap/bin/skype /usr/sbin/skype
 ```
 
 ## Customization
@@ -147,7 +143,7 @@ $ vi /usr/share/dbus-1/system.d/org.freedesktop.UPower.conf
 ## Nemo
 Disable recent files: 
 ```bash
-gsettings set org.cinnamon.desktop.privacy remember-recent-files false`
+gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 ```
 ```bash
 sudo rm -f /usr/share/nemo/actions/send-by-mail.nemo_action
