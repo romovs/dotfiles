@@ -41,6 +41,21 @@ https://addons.mozilla.org/en-US/firefox/addon/youtube_downloader_webx/
 - SideBarEnhancements
 - RON
 
+Sublime settings
+```json
+{
+       "ignored_packages":
+       [
+              "Vintage",
+       ],
+       "color_scheme": "Catppuccin Mocha.sublime-color-scheme",
+       "theme": "Adaptive.sublime-theme",
+       "font_size": 9,
+       "index_files": true,
+       "show_encoding" : true,
+}
+```
+
 ## Zsh
 https://github.com/robbyrussell/oh-my-zsh
 ```bash
