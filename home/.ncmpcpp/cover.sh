@@ -7,6 +7,13 @@
 dir=$(dirname "/mnt/data/data/music/$(mpc current -f %file%)") 
 cover="$(find "$dir" -type d -exec find {} -maxdepth 1 -type f -iregex ".*\.\(jpe?g\|png\|gif\|bmp\)" \; | head -n1)"
 
+# when playing CUE files, "mpc current -f %file%"" will return string like this:
+# "Diary of Dreams/The Anatomy Of Silence/Diary of Dreams - The Anatomy Of Silence.cue/track0002"
+# therefore test whether path ends with .cue and extract dirname once more
+if [[ "$dir" == *.cue ]] ; then
+    dir=$(dirname "$dir")
+fi    
+
 # without random name urxvt+ncmpcpp for some reason cannot set image more than once (perhaps due to some caching feature?)
 filename=$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 32)
 
