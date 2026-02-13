@@ -4,18 +4,24 @@ dotfiles and fresh system installation instructions for personal use.
 
 ## Dnf
 ```bash
-sudo dnf remove parole thunderbird hexchat transmission-gtk abrt ffmpeg-free mate-calc blivet-gui gnote caja pluma plymou* mate-system-monitor 
+sudo dnf remove parole thunderbird hexchat transmission-gtk abrt ffmpeg-free mate-calc gnote caja pluma plymou* mate-system-monitor
 ```
+
+
+```bash
+# needed due to conflicting ffmpeg from Fedora repos and the one from RPMFusion
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+```
+
 ```bash
 sudo dnf copr enable atim/bottom -y
 ```
 ```bash
-sudo dnf install ffmpeg fuse-libs hplip-gui galculator gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncmpcpp google-droid-sans-fonts google-droid-sans-mono-fonts ffmpegthumbnailer kdiff3 zsh kernel-devel kernel-headers gcc mpv nmap darktable libsane-hpaio nemo nemo-fileroller cmake git powerline-fonts papirus-icon-theme papirus-icon-theme-dark arc-theme VirtualBox libreoffice-calc libreoffice-writer dkms acpid libglvnd-devel vdpauinfo libva-vdpau-driver libva-utils alacritty avidemux ImageMagick flacon libva-intel-driver intel-media-driver gstreamer1-vaapi fuse polybar rofi i3
+sudo dnf install ffmpeg fuse-libs hplip-gui galculator gcc-c++ gimp wireshark deluge unrar flac mpd mpc ncmpcpp google-droid-sans-fonts google-droid-sans-mono-fonts ffmpegthumbnailer kdiff3 zsh kernel-devel kernel-headers gcc mpv nmap darktable libsane-hpaio nemo nemo-fileroller cmake git powerline-fonts papirus-icon-theme papirus-icon-theme-dark arc-theme VirtualBox libreoffice-calc libreoffice-writer dkms acpid libglvnd-devel vdpauinfo libva-nvidia-driver libva-utils alacritty avidemux ImageMagick flacon libva-intel-driver intel-media-driver gstreamer1-vaapi fuse polybar rofi i3 snap
 ```
 
 Install: `https://github.com/Toqozz/wired-notify`
 
-If no EAC3 codec support then remove `ffmpeg-free` from Fedora repos and isntall `ffmpeg` from RPMFusion.
 
 
 ## i3 over mate
@@ -77,10 +83,8 @@ Place in $HOME/.icons/kora
 ```bash
 sudo ln -s /opt/android-studio/bin/studio.sh /usr/local/bin/android
 sudo ln -s /opt/idea-IC-211.7142.45/bin/idea.sh /usr/local/bin/idea
-sudo ln -s /opt/Morgen/morgen /usr/local/bin/morgen
 sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram
 sudo ln -s ~/projects/wired-notify/target/release/wired /usr/sbin/wired
-sudo ln -s /var/lib/snapd/snap/bin/skype /usr/sbin/skype
 ```
 
 ## Customization

@@ -7,7 +7,6 @@
 # desktop
 set $DISP1 DP-2
 set $DISP2 DP-0
-set $DISP3 HDMI-0
 
 font pango:Droid Sans Mono 9
 
@@ -152,8 +151,6 @@ workspace "11: cal" output $DISP2
 workspace "12: mon" output $DISP2
 
 workspace "13: git" output $DISP1
-
-workspace "14: large" output $DISP3
 
 # ############################################################
 

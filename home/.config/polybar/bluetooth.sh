@@ -1,7 +1,7 @@
 #!/bin/sh
 
 print() {
-  if [ $(bluetoothctl show | grep "Powered: yes" | wc -c) -eq 0 ]
+  if [ $(echo "show" | bluetoothctl | grep "Powered: yes" | wc -c) -eq 0 ]
   then
       echo "%{F#6b6b6b}%{F-} %{F#6b6b6b}off%{F-}"
   else
@@ -17,7 +17,7 @@ print() {
 }
 
 toggle() {
-  if [ $(bluetoothctl show | grep "Powered: yes" | wc -c) -eq 0 ]
+  if [ $(echo "show" | bluetoothctl | grep "Powered: yes" | wc -c) -eq 0 ]
   then
     bluetoothctl power on
   else
