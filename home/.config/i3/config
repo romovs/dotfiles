@@ -269,7 +269,7 @@ exec mpd
 exec_always --no-startup-id $HOME/.config/polybar/run.sh
 exec deluge
 exec urxvt -e ncmpcpp
-exec morgen
+exec /var/lib/snapd/snap/bin/morgen
 exec subl
 exec alacritty
 exec nemo &
