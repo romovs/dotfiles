@@ -62,6 +62,13 @@ Sublime settings
 }
 ```
 
+## mpd
+```bash
+mkdir ~/.config/mpd/playlists
+systemctl --user enable mpd.service
+systemctl --user start mpd.service
+```
+
 ## Zsh
 https://github.com/robbyrussell/oh-my-zsh
 ```bash
