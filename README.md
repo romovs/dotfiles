@@ -98,6 +98,43 @@ sudo ln -s ~/projects/wired-notify/target/release/wired /usr/sbin/wired
 Copy icon into clipboard `echo -ne "\ue897" | xclip -selection clipboard`  
 Reload X resources `xrdb ~/.Xresources`
 
+
+## Samba
+```bash
+sudo dnf install samba samba-common samba-client
+
+mkdir /home/$USER/shared
+chmod 755 /home/$USER/shared
+ls -s /run/media/PATH1 /home/$USER/shared/movies_12TB
+ln -s /mnt/data/__media__ /home/$USER/shared/movies_6TB
+
+# add Samba password
+sudo smbpasswd -a $USER
+# enbable the account
+sudo smbpasswd -e $USER
+
+# copy smb.conf content
+sudo vi /etc/samba/smb.conf
+
+sudo systemctl enable --now smb
+sudo systemctl enable --now nmb
+
+systemctl status smb
+systemctl status nmb
+
+sudo firewall-cmd --permanent --add-service=samba
+sudo firewall-cmd --reload
+
+# local test
+smbclient //localhost/shared -U $USER -c ls
+
+# Remote sh test
+smbclient //192.168.0.13/shared -U rom -c ls
+
+# Remote Nemo test
+smb://192.168.0.13/shared
+```
+
 ## Thinkpad
 Throttle fix https://github.com/erpalma/lenovo-throttling-fix  
 Custom boot logo https://www.reddit.com/r/thinkpad/comments/a57xhc/guide_custom_boot_logo_on_a_t480/  
